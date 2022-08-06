@@ -1,13 +1,180 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #c2c5aa;
+}
+/* Start Home Component */
+.homeBg {
+  background-color: #c2c5aa;
+}
+.homeContent{
+  min-height: 100vh;
+}
+.addNote {
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #333d29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.addNote:hover {
+  background-color: rgb(80, 95, 65);
+}
+.navbarStyle {
+  background-color: #333d29;
+  border-bottom: 1px solid #555;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.note {
+  padding: 0.5rem;
+  background-color: #a4ac86;
+  color: black;
+  text-align: center;
+  box-shadow: 0px 2px 15px 1px #daddd0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.icoMenu{
+  width: 100%;
+}
+.menuDots {
+  padding: 0.25rem;
+}
+.menuDots h5 {
+  padding: 0.25rem;
+  margin-bottom: 0;
+  border-radius: 4px;
+  width: 100%;
+  color: white;
+
+}
+.menuDots .editContent, .menuDots .delContent{
+ width: 50%;
+ border-radius: 4px;
+ margin: 2px;
+}
+.delContent{
+  background: #bc6c25;
+  transition: 0.2s all ease;
+}
+.editContent{
+  background: #283618;
+  transition: 0.2s all ease;
+}
+button.delContent, button.editContent{
+  outline: unset;
+  border: unset;
+  color: white;
+  border-radius: 4px;
+  padding: 0.25rem .5rem;
+}
+.delContent:hover{
+  background: #e28738;
+}
+.editContent:hover{
+  background: #415729;
+}
+.menuDots h5,
+.icoMenu i,
+.headNote i {
+  cursor: pointer;
+}
+.animateLayer,.animateLayerUpdate {
+  display: none;
+}
+.layerNote {
+  background-color: #c2c5aa7a;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block {
+  display: none;
+}
+.bgNote {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+#desc,
+#title {
+  outline: unset;
+  border: 1px solid #343a40;
+}
+#desc {
+  height: 250px;
+}
+/* End Home Component */
+/* Start Sign Component */
+.nav-item{
+  display: flex;
+}
+.navbarStyle a, .navbarStyle .nav-item li a,
+.navbarStyle .nav-item span {
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.navbarStyle ul li a:hover,
+.navbarStyle span:hover,
+.navbarStyle div:hover {
+  color: #e0a774;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-brand:focus,
+.navbar-brand:hover,
+.nav-link:focus,
+.nav-link:hover {
+  color: white;
+}
+/* Inputs */
+.inputStyle {
+  padding: 0.5rem 0.25rem;
+  outline: unset;
+  border: unset;
+  border-radius: 4px;
+}
+.inputStyle:focus-visible{
+  outline: 1px solid #283618;
+}
+.btnStyle {
+  outline: unset;
+  border: 1px solid gray;
+  color: white;
+  border-radius: 4px;
+  background: #283618;
+  transition: 0.2s all ease;
+  padding: 5px 0;
+}
+.btnStyle:hover{
+  background: #415729;
+}
+
+@media screen and (max-width: 992px) {
+  .navbarStyle .nav-item span{
+    margin-top: 5px;
+  }
+  .nav-item{
+    flex-direction: column;
+  }
+}
+
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){
+  padding: unset !important;
 }
